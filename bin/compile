@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+#sync output
+$stdout.sync = true
+
+@build_path = ARGV[0]
+@cache_path = ARGV[1]
+
+
+private
+
+def install_software
+  puts "Installing some software..."
+  puts "BUILDPATH #{@build_path}"
+  puts "CACHEPATH #{@cache_path}"
+  output = `which nc`
+  puts output
+end
+
+install_software
